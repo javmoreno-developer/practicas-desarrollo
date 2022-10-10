@@ -33,7 +33,7 @@ namespace prueba
             Console.WriteLine("Introduce tu edad por favor: ");
             int edad = Int32.Parse(Console.ReadLine());
 
-            if(edad < 18)
+            if(edad < PUEDE_CONDUCIR)
             {
                 Console.WriteLine("No puedes conducir,eres menor");
             } else
