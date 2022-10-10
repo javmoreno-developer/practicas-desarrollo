@@ -10,7 +10,7 @@ namespace prueba
     {
         static void Main(string[] args)
         {
-            Practica1();   
+            Practica2();   
         }
         #region Practica1
         static void Practica1()
@@ -24,7 +24,33 @@ namespace prueba
         #endregion
 
         #region Practica 2
+        static void Practica2()
+        {
+            const int PUEDE_CONDUCIR = 18;
+            const string TIENE_CARNET = "S";
 
+            Console.WriteLine("Vamos a evaular si puedes conducir");
+            Console.WriteLine("Introduce tu edad por favor: ");
+            int edad = Int32.Parse(Console.ReadLine());
+
+            if(edad < 18)
+            {
+                Console.WriteLine("No puedes conducir,eres menor");
+            } else
+            {
+                Console.WriteLine("Tienes carnet S/N: ");
+                string hasCarnet = Console.ReadLine();
+
+                if(String.Equals(hasCarnet.ToUpper(),TIENE_CARNET))
+                {
+                    Console.WriteLine("Puedes conducir");
+                } else
+                {
+                    Console.WriteLine("No puedes conducir");
+                }
+            }
+
+        }
         #endregion
     }
 }
