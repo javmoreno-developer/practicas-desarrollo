@@ -10,7 +10,9 @@ namespace prueba
     {
         static void Main(string[] args)
         {
-            LeerRespuesta2();   
+            Console.WriteLine(LeerRespuesta2());   
+            string w = LeerRespuesta2();
+            Console.WriteLine(w); 
         }
         #region Practica1
         static void Practica1()
@@ -78,11 +80,11 @@ namespace prueba
         #endregion
 
         #region Practica4
-        static void LeerRespuesta2()
+        static string LeerRespuesta2()
         {
             Console.WriteLine("¿Quieres entrar? S/N: ");
             string respuesta;
-            Boolean salir = false;
+            bool salir = false;
             const string OPCION_1 = "S";
             const string OPCION_2 = "N";    
             do
@@ -95,8 +97,10 @@ namespace prueba
                 {
                     Console.WriteLine("Debes introducir el valor S/N");
                 }
-                Console.WriteLine($"Has introducido {respuesta}");
-            } while(salir == false);
+                 Console.WriteLine($"Has introducido {respuesta}");
+            } while(!salir);
+            Console.WriteLine("mensaje");
+            return respuesta;
 
         }
         #endregion
