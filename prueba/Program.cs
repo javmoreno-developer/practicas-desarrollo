@@ -10,7 +10,7 @@ namespace prueba
     {
         static void Main(string[] args)
         {
-            LeerRespuesta();   
+            LeerRespuesta2();   
         }
         #region Practica1
         static void Practica1()
@@ -73,6 +73,30 @@ namespace prueba
                 }
                 Console.WriteLine($"Has introducido {respuesta}");
             }
+
+        }
+        #endregion
+
+        #region Practica4
+        static void LeerRespuesta2()
+        {
+            Console.WriteLine("¿Quieres entrar? S/N: ");
+            string respuesta;
+            Boolean salir = false;
+            const string OPCION_1 = "S";
+            const string OPCION_2 = "N";    
+            do
+            {
+                respuesta = Console.ReadLine().ToUpper();
+                if ((String.Equals(respuesta,OPCION_1)) || (String.Equals(respuesta, OPCION_2)))
+                {
+                    salir = true;
+                } else
+                {
+                    Console.WriteLine("Debes introducir el valor S/N");
+                }
+                Console.WriteLine($"Has introducido {respuesta}");
+            } while(salir == false);
 
         }
         #endregion
